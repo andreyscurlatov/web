@@ -8,6 +8,7 @@
 # Copyright:   (c) User 2020
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
+# -*- coding: utf-8 -*-
 
 from urllib.parse import parse_qs
 
