@@ -29,7 +29,7 @@ def app(env, start_response):
 
     start_response(status, headers)
 
-    return '\n'.join(l).encode()
+    return '\n'.join(l).encode('utf-8')
 
 
 
