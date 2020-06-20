@@ -29,7 +29,8 @@ def app(env, start_response):
 
     start_response(status, headers)
 
-    return '\n'.join(l)
+    return '\n'.join(l).encode()
+
 
 
 
