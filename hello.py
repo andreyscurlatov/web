@@ -18,10 +18,10 @@ def app(env, start_response):
 
     d = parse_qs(env['QUERY_STRING'])
 
-    l = []
+    l = ['a=1', 'a=2']
 
-    for key in d:
-        l.append("%s=%s" % (key, d[key]))
+    #for key in d:
+        #l.append("%s=%s" % (key, d[key]))
 
     status = '200 OK'
 
