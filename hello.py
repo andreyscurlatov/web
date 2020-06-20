@@ -10,15 +10,15 @@
 #-------------------------------------------------------------------------------
 # -*- coding: utf-8 -*-
 
-from urllib.parse import parse_qs
+#from urllib.parse import parse_qs
 
 def app(env, start_response):
 
     d = {}
 
-    d = parse_qs(env['QUERY_STRING'])
+    #d = parse_qs(env['QUERY_STRING'])
 
-    #l = ['a=1', 'a=2']
+    l = ['a=1\n', 'a=2\n', 'b=3\n']
 
     #for key in d:
         #l.append("%s=%s" % (key, d[key]))
@@ -29,7 +29,7 @@ def app(env, start_response):
 
     start_response(status, headers)
 
-    return "a=1 a=2 b=3".encode()
+    return l
 
 
 
