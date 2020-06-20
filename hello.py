@@ -10,18 +10,18 @@
 #-------------------------------------------------------------------------------
 # -*- coding: utf-8 -*-
 
-#from urllib.parse import parse_qs
+from urllib.parse import parse_qs
 
 def app(env, start_response):
 
     d = {}
 
-    #d = parse_qs(env['QUERY_STRING'])
+    d = parse_qs(env['QUERY_STRING'])
 
-    l = ['fgdfgf']
+    l = []
 
-    #for key in d:
-        #l.append("%s=%s" % (key, d[key]))
+    for key in d:
+        l.append("%s=%s" % (key, d[key]))
 
     status = '200 OK'
 
