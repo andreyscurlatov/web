@@ -29,7 +29,7 @@ def app(env, start_response):
 
     start_response(status, headers)
 
-    return 'a=1\na=2\nb=3'.encode()
+    return "a=1 a=2 b=3".encode()
 
 
 
