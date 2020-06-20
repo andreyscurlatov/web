@@ -18,7 +18,7 @@ def app(env, start_response):
 
     d = parse_qs(env['QUERY_STRING'])
 
-    l = ['a=1', 'a=2']
+    #l = ['a=1', 'a=2']
 
     #for key in d:
         #l.append("%s=%s" % (key, d[key]))
@@ -29,7 +29,7 @@ def app(env, start_response):
 
     start_response(status, headers)
 
-    return l
+    return 'a=1\na=2\nb=3'.encode()
 
 
 
