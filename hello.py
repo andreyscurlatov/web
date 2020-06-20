@@ -27,10 +27,11 @@ def app(env, start_response):
 
     headers = [('Content-Type', 'text/plain'),]
 
-    start_response(status, headers)
+    #start_response(status, headers)
 
-    return '\n'.join(l).encode('utf-8')
+    #return '\n'.join(l).encode('utf-8')
 
+    return 'Hello, world'
 
 
 
