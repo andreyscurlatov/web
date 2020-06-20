@@ -10,28 +10,18 @@
 #-------------------------------------------------------------------------------
 # -*- coding: utf-8 -*-
 
-#from urllib.parse import parse_qs
-
 def app(env, start_response):
 
-    d = {}
-
-    #d = parse_qs(env['QUERY_STRING'])
-
-    l = ['a=1', 'a=2', 'b=3']
-
-    #for key in d:
-        #l.append("%s=%s" % (key, d[key]))
+    data = [(i + '\n', 'utf-8') for i in env['QUERY_STRING'].split('&')]
 
     status = '200 OK'
 
     headers = [('Content-Type', 'text/plain'),]
 
-    #start_response(status, headers)
+    start_response(status, headers)
 
-    #return '\n'.join(l).encode('utf-8')
+    return data
 
-    return 'Hello, world'
 
 
 
