@@ -12,7 +12,7 @@
 
 def app(env, start_response):
 
-    data = [(i + '\n', 'utf-8') for i in env['QUERY_STRING'].split('&')]
+    data = [(i + "\n", 'utf-8') for i in env['QUERY_STRING'].split('&')]
 
     status = '200 OK'
 
