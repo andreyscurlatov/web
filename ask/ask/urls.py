@@ -19,8 +19,8 @@ from qa.views import test
 
 urlpatterns = [
 
-    #path('',views.index,name='index'),
-    #path('login/',views.login,name='login'),
+    url('',test,name='index'),
+    url('login/',test,name='login'),
     #path('signup/',views.login,name='signup'),
     url('question/<int:pk>',test,name='test'),
     #path('ask/',views.ask,name='ask'),
