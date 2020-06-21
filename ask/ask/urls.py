@@ -21,9 +21,9 @@ urlpatterns = [
 
     url(r'^$',test,name='index'),
     url('login/',test,name='login'),
-    #path('signup/',views.login,name='signup'),
+    url('signup/',test,name='signup'),
     url('question/<int:pk>',test,name='test'),
-    #path('ask/',views.ask,name='ask'),
-    #path('popular/',views.popular,name='popular'),
-    #path('new/',views.new,name='new'),
+    url('ask/',test,name='ask'),
+    url('popular/',test,name='popular'),
+    url('new/',test,name='new'),
 ]
