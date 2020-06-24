@@ -7,7 +7,14 @@ sudo ln -sf /home/box/web/etc/gunicorn_ask.conf.py   /etc/gunicorn.d/ask.py
 sudo killall -9 gunicorn
 sudo gunicorn -c /etc/gunicorn.d/hello.py hello:app &
 sudo gunicorn -c /etc/gunicorn.d/ask.py ask.wsgi:application &
-#﻿sudo /etc/init.d/mysql start﻿
+
+sudo /etc/init.d/mysql start
+mysql -uroot -e "create database stepic_web;"
+mysql -uroot -e "grant all privileges on stepic_web.* to 'box'@'localhost' with grant option;"
+~/web/ask/manage.py makemigrations
+~/web/ask/manage.py migrate
+
+
 
 
 
