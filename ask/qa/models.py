@@ -15,7 +15,7 @@ class Question(models.Model):
 
     objects = QuestionManager()
     title = models.CharField(max_length = 255)
-    text = models.TextField(max_length = 255, null = True, blank = True)
+    text = models.TextField(blank = True, null = True)
     added_at = models.DateTimeField(auto_now_add = True)
     rating = models.IntegerField(default = 0)
     author = models.ForeignKey(User, on_delete = models.CASCADE)
