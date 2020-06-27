@@ -8,9 +8,9 @@ sudo killall -9 gunicorn
 sudo gunicorn -c /etc/gunicorn.d/hello.py hello:app &
 sudo gunicorn -c /etc/gunicorn.d/ask.py ask.wsgi:application &
 
-sudo /etc/init.d/mysql start
-mysql -uroot -e "create database stepic_web character set utf8;"
-mysql -uroot -e "grant all privileges on stepic_web.* to 'box'@'localhost' with grant option;"
+#sudo /etc/init.d/mysql start
+#mysql -uroot -e "create database stepic_web character set utf8;"
+#mysql -uroot -e "grant all privileges on stepic_web.* to 'box'@'localhost' with grant option;"
 python ~/web/ask/manage.py makemigrations
 python ~/web/ask/manage.py migrate
 
