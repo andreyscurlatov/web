@@ -17,11 +17,13 @@ class Question(models.Model):
 
     objects = QuestionManager()
     title = models.CharField(max_length = 255)
-    text = models.TextField()
+
     added_at = models.DateTimeField(auto_now_add = True)
     rating = models.IntegerField(default = 0)
+    text = models.TextField()
     author = models.ForeignKey(User, on_delete = models.CASCADE)
     likes = models.ManyToManyField(User, related_name='likes_set')
+
 
 
 class Answer(models.Model):
