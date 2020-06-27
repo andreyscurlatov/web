@@ -11,8 +11,7 @@ sudo gunicorn -c /etc/gunicorn.d/ask.py ask.wsgi:application &
 sudo /etc/init.d/mysql start
 mysql -uroot -e "create database stepic_web;"
 mysql -uroot -e "grant all privileges on stepic_web.* to 'box'@'localhost' with grant option;"
-python ~/web/ask/manage.py syncdb #makemigrations qa
-#python3 ~/web/ask/manage.py migrate qa
+python ~/web/ask/manage.py syncdb 
 
 
 
